@@ -46,9 +46,7 @@ const CourseIdPage = async ({
     return null;
   }
 
-  return <div>Anuj Maurya</div>
-
-  // return redirect(`/courses/${params.courseId}/channels/${initialChannel?.id}`)
+   return redirect(`/courses/${params.courseId}/channels/${initialChannel?.id}`)
 }
 
  

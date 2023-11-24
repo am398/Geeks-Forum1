@@ -74,11 +74,10 @@ export const CreatecourseModal = () => {
       <DialogContent className="bg-white text-black p-0 overflow-hidden">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-center font-bold">
-            Customize your course
+            Create Your Course
           </DialogTitle>
           <DialogDescription className="text-center text-zinc-500">
-            Give your course a personality with a name and an image. You can
-            always change it later.
+            Write the Name and Upload the Picture for Your Course
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
