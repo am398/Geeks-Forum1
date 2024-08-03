@@ -49,7 +49,7 @@ export const DeleteChannelModal = () => {
 
   return (
     <Dialog open={isModalOpen} onOpenChange={onClose}>
-      <DialogContent className="bg-white text-black p-0 overflow-hidden">
+      <DialogContent className="bg-gradient-to-br from-gray-100 via-emerald-200 to-gray-300 text-black p-4 overflow-hidden border-2 border-blue-600 rounded-lg shadow-md">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-center font-bold">
             Delete Channel

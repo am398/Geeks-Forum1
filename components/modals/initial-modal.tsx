@@ -20,7 +20,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage
+  FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -29,11 +29,11 @@ import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
   name: z.string().min(1, {
-    message: "Course name is required."
+    message: "Course name is required.",
   }),
   imageUrl: z.string().min(1, {
-    message: "Course image is required."
-  })
+    message: "Course image is required.",
+  }),
 });
 
 export const InitialModal = () => {
@@ -50,7 +50,7 @@ export const InitialModal = () => {
     defaultValues: {
       name: "",
       imageUrl: "",
-    }
+    },
   });
 
   const isLoading = form.formState.isSubmitting;
@@ -65,7 +65,7 @@ export const InitialModal = () => {
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   if (!isMounted) {
     return null;
@@ -73,13 +73,13 @@ export const InitialModal = () => {
 
   return (
     <Dialog open>
-      <DialogContent className="bg-white text-black p-0 overflow-hidden">
+      <DialogContent className="bg-gradient-to-br from-gray-100 via-emerald-200 to-gray-300 text-black p-4 overflow-hidden border-2 border-blue-600 rounded-lg shadow-md">
         <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-center font-bold">
-            Customize your Course
+            Add a New Course
           </DialogTitle>
           <DialogDescription className="text-center text-zinc-500">
-            Course Name amd mage. You can always change it later.
+            Add Information about Course Name and Add the Image
           </DialogDescription>
         </DialogHeader>
         <Form {...form}>
@@ -108,16 +108,14 @@ export const InitialModal = () => {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel
-                      className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70"
-                    >
+                    <FormLabel className="uppercase text-xs font-bold text-zinc-500 dark:text-secondary/70">
                       Course name
                     </FormLabel>
                     <FormControl>
                       <Input
                         disabled={isLoading}
-                        className="bg-zinc-300/50 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
-                        placeholder="Enter server name"
+                        className="bg-zinc-400/50 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
+                        placeholder="Enter Course name"
                         {...field}
                       />
                     </FormControl>
@@ -126,7 +124,7 @@ export const InitialModal = () => {
                 )}
               />
             </div>
-            <DialogFooter className="bg-gray-100 px-6 py-4">
+            <DialogFooter className=" px-6 py-4">
               <Button variant="primary" disabled={isLoading}>
                 Create
               </Button>
@@ -135,5 +133,5 @@ export const InitialModal = () => {
         </Form>
       </DialogContent>
     </Dialog>
-  )
-}
+  );
+};

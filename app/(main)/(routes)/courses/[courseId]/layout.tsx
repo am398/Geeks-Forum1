@@ -18,33 +18,29 @@ const CourseIdLayout = async ({
     return redirectToSignIn();
   }
 
-
   const course = await db.course.findUnique({
     where: {
       id: params.courseId,
       members: {
         some: {
-          profileId: profile.id
-        }
-      }
-    }
+          profileId: profile.id,
+        },
+      },
+    },
   });
 
   if (!course) {
     return redirect("/");
   }
 
-  return ( 
+  return (
     <div className="h-full">
-      <div 
-      className="hidden md:flex h-full w-60 z-20 flex-col fixed inset-y-0">
+      <div className="hidden md:flex h-full w-60 z-20 flex-col fixed inset-y-0 pt-20">
         <CourseSidebar courseId={params.courseId} />
       </div>
-      <main className="h-full md:pl-60">
-        {children}
-      </main>
+      <main className="h-full md:pl-60 pt-20">{children}</main>
     </div>
-   );
-}
- 
+  );
+};
+
 export default CourseIdLayout;

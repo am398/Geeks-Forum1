@@ -37,7 +37,6 @@ const roleIconMap = {
 };
 
 export const CourseSidebar = async ({ courseId }: CourseSidebarProps) => {
-  console.log("courseId", courseId);
   const profile = await currentProfile();
 
   if (!profile) {
@@ -87,7 +86,7 @@ export const CourseSidebar = async ({ courseId }: CourseSidebarProps) => {
   )?.role;
 
   return (
-    <div className="flex flex-col h-full text-primary w-full dark:bg-[#2B2D31] bg-[#F2F3F5]">
+    <div className="flex flex-col h-full text-primary w-full dark:bg-gradient-to-br from-[#2B2D31] via-[#34373C] to-[#3C3F44] bg-gradient-to-br from-[#F2F3F5] via-[#E0F7FA] to-[#B3E5FC]">
       <CourseHeader course={course} role={role} />
       <ScrollArea className="flex-1 px-3">
         <div className="mt-2">
@@ -203,11 +202,7 @@ export const CourseSidebar = async ({ courseId }: CourseSidebarProps) => {
             />
             <div className="space-y-[2px]">
               {members.map((member) => (
-                <CourseMember
-                  key={member.id}
-                  member={member}
-                  course={course}
-                />
+                <CourseMember key={member.id} member={member} course={course} />
               ))}
             </div>
           </div>

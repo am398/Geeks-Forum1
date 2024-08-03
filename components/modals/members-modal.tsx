@@ -97,8 +97,8 @@ export const MembersModal = () => {
 
   return (
     <Dialog open={isModalOpen} onOpenChange={onClose}>
-      <DialogContent className="bg-white text-black overflow-hidden">
-        <DialogHeader className="pt-8 px-6">
+      <DialogContent className="bg-gradient-to-br from-gray-100 via-yellow-200 to-gray-300 text-black p-4 overflow-hidden border-2 border-blue-600 rounded-lg shadow-md">
+      <DialogHeader className="pt-8 px-6">
           <DialogTitle className="text-2xl text-center font-bold">
             Manage Learners
           </DialogTitle>

@@ -1,13 +1,7 @@
 "use client";
-import { redirect } from "next/navigation";
-import { db } from "@/lib/db";
-import { initialProfile } from "@/lib/initial-profile";
-import { InitialModal } from "@/components/modals/initial-modal";
+import { SignIn, SignUp, SignInButton } from "@clerk/nextjs";
 import { GraduationCap, Users, Book, MessageCircle } from "lucide-react";
-import { SignedOut, SignInButton, useUser } from "@clerk/nextjs";
-import UniversityPage from "@/components/universityPage";
-import { useEffect } from "react";
-import { currentUser } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -29,14 +23,8 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   );
 };
 
-const SetupPage = () => {
-  const { isSignedIn, user, isLoaded } = useUser();
-
-  useEffect(() => {
-    if (isSignedIn && isLoaded) {
-      redirect("/dashboard");
-    }
-  }, [isSignedIn, isLoaded]);
+const UniversityPage: React.FC = () => {
+  const router = useRouter();
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -57,13 +45,12 @@ const SetupPage = () => {
               and teaching easier and more interactive than ever before.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <SignedOut>
-                <SignInButton>
-                  <button className="bg-white text-blue-600 font-semibold py-2 px-6 rounded-full hover:bg-blue-100 transition duration-300">
-                    Join Now
-                  </button>
-                </SignInButton>
-              </SignedOut>
+              <SignInButton>
+                <button className="bg-white text-blue-600 font-semibold py-2 px-6 rounded-full hover:bg-blue-100 transition duration-300">
+                  Join Now
+                  {/* <SignIn path="/sign-in" routing="path" signUpUrl="/sign-up" /> */}
+                </button>
+              </SignInButton>
             </div>
           </div>
 
@@ -95,4 +82,4 @@ const SetupPage = () => {
   );
 };
 
-export default SetupPage;
+export default UniversityPage;
