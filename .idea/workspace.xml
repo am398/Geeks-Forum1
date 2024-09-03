@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="bea3f733-e68d-4bb2-9cf4-b169337f3a60" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/app/(main)/(routes)/courses/[courseId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(main)/(routes)/courses/[courseId]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(setup)/dashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(setup)/dashboard/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(setup)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(setup)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/channels/[channelId]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/channels/[channelId]/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/courses/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/courses/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/chat/chat-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/chat/chat-header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/chat/chat-input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/chat/chat-input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/chat/chat-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/chat/chat-item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/chat/chat-messages.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/chat/chat-messages.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/chat/chat-welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/chat/chat-welcome.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/modals/create-channel-modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/modals/create-channel-modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/modals/delete-channel-modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/modals/delete-channel-modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/modals/delete-message-modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/modals/delete-message-modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/modals/edit-channel-modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/modals/edit-channel-modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/navigation/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigation/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/socket-indicator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/socket-indicator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +15,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2lWYQJ3T56hiH5rFYu6DesDp3ei" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -41,6 +29,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/home/anuj"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
