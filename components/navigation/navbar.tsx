@@ -162,11 +162,11 @@ const Navbar = () => {
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <Image
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8"
-            alt="GeeksForum Logo"
-            width={32}
-            height={32}
+            src="https://utfs.io/f/314f3809-283d-417c-916c-ecc7d65fc6ee-kqs0ze.51.19.jpeg"
+            className="h-13 rounded-xl"
+            alt="GeeksForum Logo "
+            width={50}
+            height={50}
           />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             GeeksForum

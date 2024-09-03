@@ -40,9 +40,6 @@ const formSchema = z.object({
     .string()
     .min(1, {
       message: "Channel name is required.",
-    })
-    .refine((name) => name !== "general", {
-      message: "Channel name cannot be 'general'",
     }),
   type: z.nativeEnum(ChannelType),
 });
@@ -60,7 +57,8 @@ export const CreateChannelModal = () => {
     defaultValues: {
       name: "",
       type: channelType || ChannelType.TEXT,
-    },
+    },  //  <DialogContent className="bg-white text-black p-0 overflow-hidden">
+
   });
 
   useEffect(() => {
@@ -68,7 +66,7 @@ export const CreateChannelModal = () => {
       form.setValue("type", channelType);
     } else {
       form.setValue("type", ChannelType.TEXT);
-    }
+    } 
   }, [channelType, form]);
 
   const isLoading = form.formState.isSubmitting;

@@ -31,7 +31,7 @@ const CourseIdPage = async ({
     include: {
       channels: {
         where: {
-          name: "general"
+          name: "Study Zone"
         },
         orderBy: {
           createdAt: "asc"
@@ -42,7 +42,7 @@ const CourseIdPage = async ({
 
   const initialChannel = course?.channels[0];
 
-  if (initialChannel?.name !== "general") {
+  if (initialChannel?.name !== "Study Zone") {
     return null;
   }
 

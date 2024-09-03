@@ -8,6 +8,7 @@ import { SignedOut, SignInButton, useUser } from "@clerk/nextjs";
 import UniversityPage from "@/components/universityPage";
 import { useEffect } from "react";
 import { currentUser } from "@clerk/nextjs";
+import { Loader } from "lucide-react";
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -37,7 +38,7 @@ const SetupPage = () => {
       redirect("/dashboard");
     }
   }, [isSignedIn, isLoaded]);
-  return (
+  return isLoaded ? (
     <div className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 text-white">
       <div className="container mx-auto px-4 py-12">
         <header className="text-center mb-12">
@@ -57,13 +58,11 @@ const SetupPage = () => {
               and teaching easier and more interactive than ever before.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <SignedOut>
-                <SignInButton>
-                  <button className="bg-white text-blue-600 font-semibold py-2 px-6 rounded-full hover:bg-blue-100 transition duration-300">
-                    Join Now
-                  </button>
-                </SignInButton>
-              </SignedOut>
+              <SignInButton>
+                <button className="bg-white text-blue-600 font-semibold py-2 px-6 rounded-full hover:bg-blue-100 transition duration-300">
+                  Join Now
+                </button>
+              </SignInButton>
             </div>
           </div>
 
@@ -90,6 +89,12 @@ const SetupPage = () => {
             />
           </div>
         </main>
+      </div>
+    </div>
+  ) : (
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="flex flex-col items-center justify-center">
+        <Loader size={80} />
       </div>
     </div>
   );
